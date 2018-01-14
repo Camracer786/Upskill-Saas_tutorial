@@ -38,6 +38,11 @@
     
     <!--We took this out, because this was adding a margin to the entire body. -->
     <!--<div class="container">-->
+        <div class="container">
+          <% flash.each do |type, msg| %>
+            <%= content_tag :div, msg, class: "alert alert-#{type}" %>
+          <% end %>
+        </div>
        <%= yield %>
     <!--</div>-->
   </body>
