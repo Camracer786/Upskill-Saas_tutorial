@@ -1,0 +1,6 @@
+This User's name is <%= @user.profile.first_name %>
+<br>
+This user's email is <%= @user.profile.contact_email %>
+<% if current_user.plan.id == 1 %>
+  <%= @user.profile.phone_number %>  
+<% end %>
