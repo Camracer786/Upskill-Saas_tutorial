@@ -10,7 +10,7 @@
         <div class="well">
           <h2 class="text-center"> Your Profile </h2>
             <% if current_user.profile %>
-              <%= link_to "Edit your Profile", "#", class: 'btn btn-default btn-lg btn-block'  %>
+              <%= link_to "Edit your Profile", edit_user_profile_path(user_id: current_user.id), class: 'btn btn-default btn-lg btn-block'  %>
               <%= link_to "View Your Profile", user_path(id: current_user.id), class: 'btn btn-default btn-lg btn-block'  %>
             <% else %>
               <%= link_to "Create your profile", new_user_profile_path(user_id: current_user.id), class: 'btn btn-default btn-lg btn-block' %>
@@ -21,7 +21,7 @@
         <div class="well">
           <h2 class="text-center"> The Community </h2>
           <p> Visit the Community to meet other developers, Entrepreneurs, and Investors! </p>
-          <%= link_to "Visit the Community", "#", class: 'btn btn-default btn-large btn-block' %>
+          <%= link_to "Visit the Community", users_path, class: 'btn btn-default btn-large btn-block' %>
         </div>
       </div>
     <% else %> 
